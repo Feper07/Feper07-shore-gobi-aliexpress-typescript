@@ -13,7 +13,7 @@ function Collection() {
       setSelectedCollection(collection);
     }
   }
-
+  
   return (
     <div className='main-collection'>
       <div className='title-collection'>

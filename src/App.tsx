@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import ColorClothes from './components/ColorClothes';
 import Size from './components/Size';
@@ -39,7 +39,7 @@ import bb from "./components/images1/bb.webp";
 import cc from "./components/images1/cc.webp";
 import dd from "./components/images1/dd.webp";
 import ee from "./components/images1/ee.webp";
-import ff from "./components/images1/ff.webp";
+import ff from "./components/images1/ff.webp"; 
 
 import _a1 from "./components/images1/_a1.webp";
 import _a2 from "./components/images1/_a2.webp";
@@ -74,212 +74,127 @@ import _a27 from "./components/images1/_a27.jpg";
 import _a28 from "./components/images1/_a28.jpg";
 import _a29 from "./components/images1/_a29.jpg";
 
-function App()
-{
 
-  const colorClothesProps = {
-    a: a,
-    b: b,
-    c: c,
-    d: d,
-    description: "Camiseta en Algodón",
-    colorTile: ['#e4dad2', '#f4bc4b', '#1a9cb6', '#b2814d'],
-    worth: "$190.000",
-  };
+function App() {
+  const [currentGender, setCurrentGender] = useState('');
 
-  const aComponentProps = {
-    a: e,
-    b: f,
-    c: g,
-    d: h,
-    description: "Camiseta en Seda",
-    colorTile: ['#f1f1f1', '#813c44','#2f5048','#171717'],
-    worth: "$185.000",
-  };
+  const products = [
+    {
+      a: a,
+      b: b,
+      c: c,
+      d: d,
+      description: "Camiseta en Algodón",
+      colorTile: ['#e4dad2', '#f4bc4b', '#1a9cb6', '#b2814d'],
+      worth: "$190.000",
+      gender: 'men',
+    },
+    {
+      a: _a1,
+      b: _a2,
+      c: _a3,
+      d: _a4,
+      description: 'Polo en Seda',
+      colorTile: ['#ad2148', '#adc3d9', '#d5c9bb', '#121217'],
+      worth: '$319.900',
+      gender: 'women',
+    },
+    {
+      a: e,
+      b: f,
+      c: g,
+      d: h,
+      description: "Camiseta en Seda",
+      colorTile: ['#f1f1f1', '#813c44','#2f5048','#171717'],
+      worth: "$185.000",
+      gender: 'men',
+    },
+    {
+      a: _a5,
+      b: _a6,
+      c: _a7,
+      d: _a8,
+      description: "Polo en Lana",
+      colorTile: ['#fffff6', '#161618','#0a382c','#d1c8ba'],
+      worth: "$180.999",
+      gender: 'women',
+    },
+    {
+      a: i,
+      b: j,
+      c: k,
+      d: l,
+      description: "Camiseta en Lino",
+      colorTile: ['#a69e7d', '#b3b3b0','#1c1c1c','#433b35'],
+      worth: "$210.900",
+      gender: 'men',
+    },
+    {
+      a: _a9,
+      b: _a10,
+      c: _a11,
+      d: _a11a,
+      description: "Polo en Algodón",
+      colorTile: ['#a7ba99', '#d3bab3','#f0e8e4','#dfbae3'],
+      worth: "$249.900",
+      gender: 'women',
+    },
+    {
+      a: m,
+      b: n,
+      c: o,
+      d: p,
+      description: "Camiseta Va Kevlar",
+      colorTile: ['#e9e9e9', '#514c33','#cfbfa6','#adafa5'],
+      worth: "$425.900",
+      gender: 'men',
+    },
+    {
+      a: _a12,
+      b: _a13,
+      c: _a14,
+      d: _a14a,
+      description: "Polo Sinterizado",
+      colorTile: ['#dacfc8', '#98bdc5','#08080b','#e5e6e3'],
+      worth: "$319.900",
+      gender: 'women',
+    },
+  ];
 
-  const bComponentProps = {
-    a: i,
-    b: j,
-    c: k,
-    d: l,
-    description: "Camiseta en Lino",
-    colorTile: ['#a69e7d', '#b3b3b0','#1c1c1c','#433b35'],
-    worth: "$210.900",
-  };
+  const filteredProducts = currentGender
+    ? products.filter((item) => item.gender === currentGender)
+    : products;
 
-  const cComponentProps = {
-    a: m,
-    b: n,
-    c: o,
-    d: p,
-    description: "Camiseta en V Lino",
-    colorTile: ['#e9e9e9', '#514c33','#cfbfa6','#adafa5'],
-    worth: "$425.900",
-  };
-
-  const dComponentProps = {
-    a: q,
-    b: r,
-    c: s,
-    d: t,
-    description: "Camisa en Cañamo",
-    colorTile: ['#9e9c8c', '#85c8cf','#9babc4','#d57487'],
-    worth: "$459.900",
-  };
-
-  const eComponentProps = {
-    a: u,
-    b: v,
-    c: w,
-    d: x,
-    description: "Polo en Seda",
-    colorTile: ['#e5e4d2', '#aacabf','#929cbb','#f1ceba'],
-    worth: "$319.900",
-  };
-
-  const fComponentProps = {
-    a: y,
-    b: z,
-    c: aa,
-    d: bb,
-    description: "Polo en Lino",
-    colorTile: ['#d2d0cc', '#ba7439','#3d4f4d','#1c1c1c'],
-    worth: "$180.999",
-  };
-
-  const gComponentProps = {
-    a: cc,
-    b: dd,
-    c: ee,
-    d: ff,
-    description: "Polo en Algodón",
-    colorTile: ['#9b8570', '#302f3b','#c49385','#69919e'],
-    worth: "$249.900",
-  };
-
-  const hComponentProps = {
-    a: _a1,
-    b: _a2,
-    c: _a3,
-    d: _a4,
-    description: "Polo en Seda",
-    colorTile: ['#ad2148', '#adc3d9','#d5c9bb','#121217'],
-    worth: "$319.900",
-  };
-
-  const iComponentProps = {
-    a: _a5,
-    b: _a6,
-    c: _a7,
-    d: _a8,
-    description: "Polo en Lino",
-    colorTile: ['#fffff6', '#161618','#0a382c','#d1c8ba'],
-    worth: "$180.999",
-  };
-
-  const jComponentProps = {
-    a: _a9,
-    b: _a10,
-    c: _a11,
-    d: _a11a,
-    description: "Polo en Algodón",
-    colorTile: ['#a7ba99', '#d3bab3','#f0e8e4','#dfbae3'],
-    worth: "$249.900",
-  };
-
-  const kComponentProps = {
-    a: _a12,
-    b: _a13,
-    c: _a14,
-    d: _a14a,
-    description: "Polo en Seda",
-    colorTile: ['#dacfc8', '#98bdc5','#08080b','#e5e6e3'],
-    worth: "$319.900",
-  };
-
-  const lComponentProps = {
-    a: _a15,
-    b: _a16,
-    c: _a17,
-    d: _a17a,
-    description: "Polo en Lino",
-    colorTile: ['#dce5ee', '#b5b2ae','#585965','#c4bcac'],
-    worth: "$180.999",
-  };
-
-  const mComponentProps = {
-    a: _a18,
-    b: _a19,
-    c: _a20,
-    d: _a21,
-    description: "Polo en Algodón",
-    colorTile: ['#665542', '#e5e7eb','#3a75cd','#bb6991'],
-    worth: "$249.900",
-  };
-
-  const nComponentProps = {
-    a: _a22,
-    b: _a23,
-    c: _a24,
-    d: _a25,
-    description: "Polo en Algodón",
-    colorTile: ['#38393e', '#a58e63','#e7e7e7','#dbd6ca'],
-    worth: "$249.900",
-  };
-
-  const oComponentProps = {
-    a: _a26,
-    b: _a27,
-    c: _a28,
-    d: _a29,
-    description: "Polo en Lino",
-    colorTile: ['#b3c2af', '#e9c653','#46486b','#d9a697'],
-    worth: "$180.999",
-  };
-  
   return (
-    <div className="App">
-      <div className='main-container'>
-          <div className='first-container'>
-            <Header/>
-          </div>
-          <div className='second-container'>
-            <Description/>
-          </div>
-          <div className='third-container'>
-            <div className='filters'>
-              <div className='collection'>
-                <Collection/>
-              </div>
-              <div className='gender'>
-                 <Gender/>
-              </div>
-              <div className='size'>
-                 <Size/>
-              </div>
-              <div className='color-select-option'>
-                 <Color/>
-              </div>
+    <div className="App"> 
+      <div className="main-container"> 
+        <div className='first-container'> 
+          <Header/> 
+        </div>
+        <div className='second-container'>
+          <Description/> 
+          </div>        
+        <div className="third-container"> 
+          <div className="filters"> 
+            <div className='collection'> 
+              <Collection/> 
             </div>
-            <div className='option-color-images'>
-              <ColorClothes {...colorClothesProps} />              
-              <ColorClothes {...iComponentProps} />
-              <ColorClothes {...aComponentProps} />
-              <ColorClothes {...jComponentProps} />
-              <ColorClothes {...bComponentProps} />
-              <ColorClothes {...kComponentProps} />
-              <ColorClothes {...cComponentProps} />
-              <ColorClothes {...lComponentProps} />
-              <ColorClothes {...dComponentProps} />
-              <ColorClothes {...mComponentProps} />
-              <ColorClothes {...eComponentProps} />
-              <ColorClothes {...nComponentProps} />
-              <ColorClothes {...fComponentProps} />
-              <ColorClothes {...oComponentProps} />
-              <ColorClothes {...gComponentProps} />
-              <ColorClothes {...hComponentProps} />
-            </div>           
+            <div className="gender">
+                <Gender setCurrentGender={setCurrentGender} />
+            </div>
+            <div className='size'>
+                 <Size/> 
+            </div> 
+            <div className='color-select-option'> 
+                 <Color/> 
+            </div> 
           </div>
+          <div className="option-color-images"> 
+            {filteredProducts.map((item) => (
+              <ColorClothes {...item} key={item.description} /> 
+            ))}
+          </div>
+        </div>
       </div>
     </div>
   );

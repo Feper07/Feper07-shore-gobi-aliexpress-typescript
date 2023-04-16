@@ -16,9 +16,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    height: 12%;
+    min-height: 20%;
     border-top: 1px solid hsla(0, 2%, 76%, 0.954);
-    font-size: 0.9vw;
+    font-size: 1.5vh;
 }
   
   .main-collection{

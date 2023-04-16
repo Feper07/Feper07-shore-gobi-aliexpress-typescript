@@ -30,6 +30,7 @@ body, .App, html {
   padding: 2%;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr 1fr;
   gap: 4px;
 }
 
@@ -43,7 +44,7 @@ body, .App, html {
   display: flex;
   flex-direction: column;
   padding: 8%; 
-  flex-wrap: wrap;
+  height: 100%;
 }
 
 .gender{

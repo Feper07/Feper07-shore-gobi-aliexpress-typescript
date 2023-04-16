@@ -10,7 +10,7 @@ function Description() {
         <div className='main-description'>
             <div className='text-1'>
                 <div><strong>Home &nbsp; / &nbsp; Women &nbsp;/ &nbsp;Swaters &nbsp;/ &nbsp; All Swaters</strong>&nbsp;</div>
-                <p className='products-total'>&nbsp;(254 Products)</p>
+                <p className='products-total'>  &nbsp;(254 Products)</p>
             </div>
             <div className='text-2'>
                 <div><strong>Active filters (24) &nbsp;&nbsp;&nbsp;Clear All</strong>

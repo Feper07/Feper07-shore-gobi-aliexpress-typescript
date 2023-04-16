@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import "../style-sheets/ColorClothes.css"
+import "../style-sheets/ColorClothes.css";
 
   interface ColorClothesProps {
   a: string;
@@ -9,7 +9,8 @@ import "../style-sheets/ColorClothes.css"
   description: string;
   colorTile: string[];
   worth: string;
-  }
+  gender:string;
+  };
 
   function ColorClothes(props: ColorClothesProps) {
     const [colorClothes, setColorClothes] = useState(props.a);
@@ -81,8 +82,6 @@ import "../style-sheets/ColorClothes.css"
   }
 
 export default ColorClothes;
-
-
 
 
 
