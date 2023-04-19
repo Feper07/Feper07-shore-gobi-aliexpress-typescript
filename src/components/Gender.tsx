@@ -27,7 +27,7 @@ function Gender(props:IGenderProps) {
         <div className="text-select-gender"> 
           <div 
             className={`letter-gender ${selectedGender === 'women' && 'selected-gender'}`} 
-            onClick={() => handleGenderSelect('women')}
+            onClick={() => handleGenderSelect('women')} 
           > 
             <BsCheckLg/> 
           </div> 
@@ -45,9 +45,9 @@ function Gender(props:IGenderProps) {
       </div> 
       <div className='list-gender'> 
         <Listgender/> 
-      </div>  
+      </div> 
     </div> 
-  );
-}
+  ); 
+} 
 
 export default Gender; 

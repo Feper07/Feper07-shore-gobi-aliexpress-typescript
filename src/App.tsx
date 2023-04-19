@@ -76,7 +76,11 @@ import _a29 from "./components/images1/_a29.jpg";
 
 
 function App() {
+
+  /* I need these consts if I want to creat the filters */
+
   const [currentGender, setCurrentGender] = useState('');
+  const [currentCollection, setCurrentCollection] = useState('');
 
   const products = [
     {
@@ -84,10 +88,11 @@ function App() {
       b: b,
       c: c,
       d: d,
-      description: "Camiseta en Algodón",
+      description: "Camiseta en Algodón", /* I must write different name in everything description, because if there are the same name, the const will repeat */
       colorTile: ['#e4dad2', '#f4bc4b', '#1a9cb6', '#b2814d'],
       worth: "$190.000",
       gender: 'men',
+      collectionShore: "Winter",
     },
     {
       a: _a1,
@@ -98,6 +103,7 @@ function App() {
       colorTile: ['#ad2148', '#adc3d9', '#d5c9bb', '#121217'],
       worth: '$319.900',
       gender: 'women',
+      collectionShore: "Paintbox",
     },
     {
       a: e,
@@ -108,6 +114,7 @@ function App() {
       colorTile: ['#f1f1f1', '#813c44','#2f5048','#171717'],
       worth: "$185.000",
       gender: 'men',
+      collectionShore: "Mineral",
     },
     {
       a: _a5,
@@ -118,6 +125,7 @@ function App() {
       colorTile: ['#fffff6', '#161618','#0a382c','#d1c8ba'],
       worth: "$180.999",
       gender: 'women',
+      collectionShore: "Winter",
     },
     {
       a: i,
@@ -128,6 +136,7 @@ function App() {
       colorTile: ['#a69e7d', '#b3b3b0','#1c1c1c','#433b35'],
       worth: "$210.900",
       gender: 'men',
+      collectionShore: "Paintbox",
     },
     {
       a: _a9,
@@ -138,6 +147,7 @@ function App() {
       colorTile: ['#a7ba99', '#d3bab3','#f0e8e4','#dfbae3'],
       worth: "$249.900",
       gender: 'women',
+      collectionShore: "Mineral",
     },
     {
       a: m,
@@ -148,6 +158,7 @@ function App() {
       colorTile: ['#e9e9e9', '#514c33','#cfbfa6','#adafa5'],
       worth: "$425.900",
       gender: 'men',
+      collectionShore: "Winter",
     },
     {
       a: _a12,
@@ -155,16 +166,25 @@ function App() {
       c: _a14,
       d: _a14a,
       description: "Polo Sinterizado",
-      colorTile: ['#dacfc8', '#98bdc5','#08080b','#e5e6e3'],
+      colorTile: ['#dacfc8', '#98bdc5','#08080be5e6e3'],
       worth: "$319.900",
       gender: 'women',
-    },
+      collectionShore: "Paintbox",
+    },  
   ];
 
   const filteredProducts = currentGender
     ? products.filter((item) => item.gender === currentGender)
     : products;
 
+    const filteredCollection = currentCollection
+    ? products.filter((item) => item.collectionShore === currentCollection)
+    : products;
+
+    /* This const is necessary if I want to mix the filters inside gander and collection. (use includes) */
+    
+    const filteredItems = filteredProducts.filter(item => filteredCollection.includes(item));
+    
   return (
     <div className="App"> 
       <div className="main-container"> 
@@ -177,7 +197,7 @@ function App() {
         <div className="third-container"> 
           <div className="filters"> 
             <div className='collection'> 
-              <Collection/> 
+              <Collection setCurrentCollection={setCurrentCollection} /> 
             </div>
             <div className="gender">
                 <Gender setCurrentGender={setCurrentGender} />
@@ -190,9 +210,9 @@ function App() {
             </div> 
           </div>
           <div className="option-color-images"> 
-            {filteredProducts.map((item) => (
-              <ColorClothes {...item} key={item.description} /> 
-            ))}
+          {filteredItems.map((item) => (
+      <ColorClothes {...item} key={item.description} /> 
+    ))}
           </div>
         </div>
       </div>
@@ -201,3 +221,16 @@ function App() {
 }
 
 export default App;
+
+/*
+Before of mix filters gender and collection:
+
+{filteredProducts.map((item) => (
+  <ColorClothes {...item} key={item.description} /> 
+  ))}
+            
+  {filteredCollection.map((item) => (
+  <ColorClothes {...item} key={item.description} /> 
+  ))}
+            
+*/
