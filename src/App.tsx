@@ -166,7 +166,7 @@ function App() {
       c: _a14,
       d: _a14a,
       description: "Polo Sinterizado",
-      colorTile: ['#dacfc8', '#98bdc5','#08080be5e6e3'],
+      colorTile: ['#dacfc8', '#98bdc5','#08080b','#e5e6e3'],
       worth: "$319.900",
       gender: 'women',
       collectionShore: "Paintbox",
