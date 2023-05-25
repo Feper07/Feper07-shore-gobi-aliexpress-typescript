@@ -11,7 +11,7 @@ interface IGenderProps{
 function Gender(props:IGenderProps) { 
   const [selectedGender, setSelectedGender] = useState(''); 
 
-  function handleGenderSelect(gender:string) { 
+  function handleGenderSelect(gender:string) {  
     let nextGender = gender === selectedGender ? '' : gender; 
     setSelectedGender(nextGender); 
     props.setCurrentGender(nextGender as string); 
@@ -19,7 +19,7 @@ function Gender(props:IGenderProps) {
 
   return ( 
     <div className="main-gender"> 
-      <div className="title-gender"> 
+      <div className="title-gender">  
         <p>Gender</p> 
         <BsChevronDown/> 
       </div> 
@@ -31,7 +31,7 @@ function Gender(props:IGenderProps) {
           > 
             <BsCheckLg/> 
           </div> 
-          <div 
+          <div  
             className={`letter-gender ${selectedGender === 'men' && 'selected-gender'}`}
             onClick={() => handleGenderSelect('men')} 
           > 

@@ -1,11 +1,11 @@
-import React from 'react';
-import "../style-sheets/Description.css";
-import { CiSliderHorizontal } from "react-icons/ci";
-import { BsChevronDown } from "react-icons/bs";
-import { FiX } from "react-icons/fi";
-
-function Description() {
-
+   
+    import React from 'react';
+    import "../style-sheets/Description.css";
+    import { CiSliderHorizontal } from "react-icons/ci";
+    import { BsChevronDown } from "react-icons/bs";
+    import { FiX } from "react-icons/fi";
+    
+    function Description() {
       return (
         <div className='main-description'>
             <div className='text-1'>
@@ -21,7 +21,7 @@ function Description() {
                 </div>
             </div>
             <div className='text-3'>
-                <div className='text-3-icons'>&nbsp;<strong><FiX/></strong>  &nbsp;Cardigans &nbsp;</div>
+                <div className='text-3-icons'>&nbsp;<strong><FiX/></strong> &nbsp;Cardigans &nbsp;</div>
                 <div className='text-3-icons'>&nbsp;<strong><FiX/></strong> &nbsp;Qwertyuopas &nbsp;</div>
                 <div className='text-3-icons'>&nbsp;<strong><FiX/></strong> &nbsp;White &nbsp;</div>
                 <div className='text-3-icons'>&nbsp;<strong><FiX/></strong> &nbsp;Black &nbsp;</div>
@@ -36,9 +36,4 @@ function Description() {
         </div>
       );
     }
-    
-export default Description;
-
-
-
-
+    export default Description;

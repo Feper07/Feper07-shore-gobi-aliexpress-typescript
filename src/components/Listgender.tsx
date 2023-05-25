@@ -2,15 +2,15 @@
     import React, { useState } from 'react';
     import "../style-sheets/Listgender.css";
 
-    function Listgender() {
+    function Listgender() { 
 
-      const [selectedListgender, setSelectedListgender] = useState('Basic');
+      const [selectedListgender, setSelectedListgender] = useState('Basic'); 
 
-            function handleListgenderSelect(Listgender:string) {
-              if (selectedListgender === Listgender) {
-                setSelectedListgender('');
-              } else {
-                setSelectedListgender(Listgender);
+            function handleListgenderSelect(Listgender:string) { 
+              if (selectedListgender === Listgender) { 
+                setSelectedListgender(''); 
+              } else { 
+                setSelectedListgender(Listgender); 
               }
             }
 
@@ -28,4 +28,5 @@
     }
     
     export default Listgender;
+
     

@@ -16,7 +16,6 @@ function Collection(props:ICollectionProps) {
     props.setCurrentCollection(nextCollection as string); 
   } 
 
-  
   return ( 
     <div className='main-collection'> 
       <div className='title-collection'> 

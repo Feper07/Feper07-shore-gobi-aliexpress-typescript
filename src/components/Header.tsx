@@ -1,9 +1,10 @@
+  
   import React from 'react'; 
   import "../style-sheets/Header.css"; 
   import { HiOutlineLocationMarker, HiOutlineShoppingBag } from "react-icons/hi"; 
-
+  
   function Header() { 
-
+  
       return ( 
         <div className='main-header'> 
             <div className='headerA'> 

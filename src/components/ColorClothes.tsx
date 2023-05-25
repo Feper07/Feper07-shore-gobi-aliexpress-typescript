@@ -1,16 +1,17 @@
 import React, { useState } from 'react';
-import "../style-sheets/ColorClothes.css";
+import { Link } from 'react-router-dom';
+import "../style-sheets/ColorClothes.css"
 
-  interface ColorClothesProps {
-  a: string;
-  b: string;
-  c: string;
-  d: string;
-  description: string;
-  colorTile: string[];
-  worth: string;
-  gender:string;
-  };
+  interface ColorClothesProps { 
+  a: string; 
+  b: string; 
+  c: string; 
+  d: string; 
+  description: string; 
+  colorTile: string[]; 
+  worth: string; 
+   id: string;
+  } 
 
   function ColorClothes(props: ColorClothesProps) {
     const [colorClothes, setColorClothes] = useState(props.a);
@@ -24,7 +25,7 @@ import "../style-sheets/ColorClothes.css";
           setColorClothes(props.b);
           break;
         case 'c':
-          setColorClothes(props.c);
+          setColorClothes(props.c); 
           break;
         case 'd':
           setColorClothes(props.d);
@@ -34,41 +35,44 @@ import "../style-sheets/ColorClothes.css";
           break;
       }
     }
-  
+
     function handleColorClick(color: string) {
-      switch (color) {
-        case 'a':
-          setColorClothes(props.a);
-          break;
-        case 'b':
+      switch (color) { 
+        case 'a':  
+          setColorClothes(props.a); 
+          break; 
+        case 'b':  
           setColorClothes(props.b);
-          break;
-        case 'c':
-          setColorClothes(props.c);
-          break;
-        case 'd':
-          setColorClothes(props.d);
-          break;
-        default:
-          setColorClothes(props.a);
-          break;
-      }
-    }
-    
-    return (
+          break; 
+        case 'c': 
+          setColorClothes(props.c); 
+          break; 
+        case 'd': 
+          setColorClothes(props.d); 
+          break; 
+        default: 
+          setColorClothes(props.a); 
+          break; 
+      } 
+    }  
+
+    return ( 
       <div className='container-main-image'>
 
-        {colorClothes && (
-          <div className="selected-image">
-            <img className='img_select' src={colorClothes} alt="selectedImage" />
-          </div>
-        )}
-        <div className='description'>{props.description}</div>
-        <div className="image-container">
-          {props.colorTile.map((color, index) => (
+        {colorClothes && ( 
+          <div className="selected-image"> 
+            <Link to={"/items/" + props.id }>
+              <img className='img_select' src={colorClothes} alt="selectedImage" />
+            </Link>
+            
+          </div> 
+        )} 
+        <div className='description'>{props.description}</div> 
+        <div className="image-container"> 
+           {props.colorTile.map((color, index) => (
             <div
               className='color-tile'
-              style={{ backgroundColor: color }}
+              style={{ backgroundColor: color }} 
               onMouseEnter={() => handleColorHover(String.fromCharCode(97 + index))}
               onClick={() => handleColorClick(String.fromCharCode(97 + index))}
             >
@@ -82,12 +86,3 @@ import "../style-sheets/ColorClothes.css";
   }
 
 export default ColorClothes;
-
-
-
-
-
-
-
-
-
