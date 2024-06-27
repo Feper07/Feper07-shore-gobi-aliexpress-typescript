@@ -4,7 +4,7 @@
     gap: 10px;
     background-color: white;
     padding: 1.5%;
-    border-top: 1px solid hsla(0, 2%, 76%, 0.954);
+    border-top: 1px solid hwb(0 76% 24% / 0.954);
 }
 
 .text-1{

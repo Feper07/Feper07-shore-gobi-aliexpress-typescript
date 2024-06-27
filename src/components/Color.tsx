@@ -16,9 +16,9 @@
     }
       return (
         <div className='main-color'> 
-          <div className='title-color'>  
-              <p> Color</p>  
-              <BsChevronDown/>   
+          <div className='title-color'> 
+              <p> Color</p> 
+              <BsChevronDown/>  
           </div>
           <div className='options-color2'> 
           <div className={`letter-colora ${selectedColor === 'a' ? 'selected-color-style' : ''}`} onClick={() => handleColorSelect('a')}><BsCheckLg/></div>

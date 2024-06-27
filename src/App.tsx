@@ -71,6 +71,9 @@
   export default App;
 
 /*
+
+"homepage": "https://Feper07.github.io/Feper07-shore-gobi-aliexpress-typescript",
+
 Before of mix filters gender and collection:
 
 {filteredProducts.map((item) => (
