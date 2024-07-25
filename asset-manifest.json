@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Feper07-shore-gobi-aliexpress-typescript/static/css/main.52e2306e.css",
+    "main.css": "/Feper07-shore-gobi-aliexpress-typescript/static/css/main.11aeb5c8.css",
     "main.js": "/Feper07-shore-gobi-aliexpress-typescript/static/js/main.f27607a1.js",
     "static/media/_a14a.webp": "/Feper07-shore-gobi-aliexpress-typescript/static/media/_a14a.32cd894753baeb11cfee.webp",
     "static/media/_a11a.webp": "/Feper07-shore-gobi-aliexpress-typescript/static/media/_a11a.a1357fcd743efff53544.webp",
@@ -35,11 +35,11 @@
     "static/media/_a6.webp": "/Feper07-shore-gobi-aliexpress-typescript/static/media/_a6.06445b40df3a200c6b36.webp",
     "static/media/_a10.webp": "/Feper07-shore-gobi-aliexpress-typescript/static/media/_a10.50c4c971ffdefef1ad61.webp",
     "index.html": "/Feper07-shore-gobi-aliexpress-typescript/index.html",
-    "main.52e2306e.css.map": "/Feper07-shore-gobi-aliexpress-typescript/static/css/main.52e2306e.css.map",
+    "main.11aeb5c8.css.map": "/Feper07-shore-gobi-aliexpress-typescript/static/css/main.11aeb5c8.css.map",
     "main.f27607a1.js.map": "/Feper07-shore-gobi-aliexpress-typescript/static/js/main.f27607a1.js.map"
   },
   "entrypoints": [
-    "static/css/main.52e2306e.css",
+    "static/css/main.11aeb5c8.css",
     "static/js/main.f27607a1.js"
   ]
 }
